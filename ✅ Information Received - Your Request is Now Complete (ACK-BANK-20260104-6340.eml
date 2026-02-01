@@ -1,0 +1,144 @@
+Delivered-To: aps181ster@gmail.com
+Received: by 2002:a05:6919:da83:b0:3f1:3b98:1df9 with SMTP id ew3csp299276ysc;
+        Sun, 4 Jan 2026 04:58:35 -0800 (PST)
+X-Received: by 2002:a17:902:f706:b0:29f:ad9:f705 with SMTP id d9443c01a7336-2a2f293d057mr430155775ad.45.1767531514799;
+        Sun, 04 Jan 2026 04:58:34 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1767531514; cv=none;
+        d=google.com; s=arc-20240605;
+        b=TAqLzaP+CMxpjg6OqYjZB1dQz3LKE73PsM5DLUOAVNprJyDL6Gy0kwuT3PhNrj19/g
+         VwTIziXSwlSUwV6B8db4KtTU+qnb6YgoYcQ+n0BqgLArfcKVEDeEUdS26Laf/6F2WWpn
+         Pft90Y97plYk2g7WUL2mRFz+AHqCwxHy9sH8wQIxBjM8fDi57acAuIO0uMTUfFzwdyYn
+         vMzGdmeO5X0zKJFbTCPZWXRChUqW33/eOM/A9RgM2ewVjyf9wgk3XMFSC0IxkO2R4J10
+         /IzOGEkPksHCDXe5Eo1OU/VFidzPg7B8zWjpwTo0iNFaNPfSdWhU2SXePGfCs74nPTzX
+         SvwQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=mime-version:date:content-transfer-encoding:message-id:subject:to
+         :from:dkim-signature;
+        bh=p0RmEYXzb9cBHQFMbkEDj8qQmlrpxb8/9Uoz+cDqf/c=;
+        fh=gjpnpOv9ebN0uti4c8se7STVtXYc3EqKVaWPhF3ThzE=;
+        b=fBBFf+8PLs2sv41PAst1HcgJrK+TTRQ7UFz/jzvyCDESmUph7ubWIUVu323nu42smA
+         Tk/SmChQ5+LpppIZY7yWpUU/LSKFVQoeRe0jsez9GTBcfMtcbcFlnHrfrT4xWb44qI8P
+         MS8v469oLf02Go5lsLdARN/i8hwLU2dDB1p5pUDTTwh0dDwgB7e6x2WHT4uYjw4o/kND
+         JU0QEL7cmr+J3EBqHsrqzdNCl/vaj3LvPnHpxdxuNIp/9KH1Emc70fJeUCJBpXGFTY6a
+         WNoPXH2F0g+Jfuw3w66MRLGtGI7gsU9ymfrVgHd6TxA2z9+0a3qCLiwOVh1RX1QF/XuI
+         xEPg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=eH8RLkRo;
+       spf=pass (google.com: domain of ashutosh.shende181@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=ashutosh.shende181@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <ashutosh.shende181@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id d9443c01a7336-2a2d1716a55sor120754505ad.10.2026.01.04.04.58.34
+        for <aps181ster@gmail.com>
+        (Google Transport Security);
+        Sun, 04 Jan 2026 04:58:34 -0800 (PST)
+Received-SPF: pass (google.com: domain of ashutosh.shende181@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=eH8RLkRo;
+       spf=pass (google.com: domain of ashutosh.shende181@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=ashutosh.shende181@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1767531514; x=1768136314; dara=google.com;
+        h=mime-version:date:content-transfer-encoding:message-id:subject:to
+         :from:from:to:cc:subject:date:message-id:reply-to;
+        bh=p0RmEYXzb9cBHQFMbkEDj8qQmlrpxb8/9Uoz+cDqf/c=;
+        b=eH8RLkRoqwUNJKHpArPyyL0/7i/dj9mclpxPSiKoRR9i/CO55dydfLJ0cpAGVHTQml
+         h/zJAmZ8zg5NSb0eUIHb0uOlECSf1VkbRQ/JRg8/muMKaolpnbM/X9M8LjgHlKthIXzd
+         A99C5bTlBTWEmKlUVSTINMn97s1RNHdP7i+zdcANMepMIRJq/s8JwKWsN/3Lo4BDN02j
+         8RTbhBvYebu+w4maa24nwtydPU6PxLXjYXx9nGmgM+lDiZaP28r3zm1dPqeiDrJg21ef
+         yRl3Fgy1NQX7vPm++fbTWare9rMeJR9Gf4RlGtnCvDepIyu1oo8C8yhpUBg7uYRFCsLs
+         5mYQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1767531514; x=1768136314;
+        h=mime-version:date:content-transfer-encoding:message-id:subject:to
+         :from:x-gm-gg:x-gm-message-state:from:to:cc:subject:date:message-id
+         :reply-to;
+        bh=p0RmEYXzb9cBHQFMbkEDj8qQmlrpxb8/9Uoz+cDqf/c=;
+        b=G/dmzIiIxrdqVmyMqcFSL679ktn4VbTGd8JKt1DqqQNXk+Z+PHNh+7P2tE9nhqbIQb
+         +zg3paqF8NETLknlvjaZLBfFHeFvo3C8Zg/jQMQt2/1HBgChGordb8uH9psCj6Mu0zSZ
+         8Oe0gZNmxzwVoKrmemHKoE7VinbX+5+07QR9EMveOwEquREE8CveJQrdw+BQgw0s4wfZ
+         NS8sahBXb3EKdBbbpEij8vghW4d7q3vsUIZOQnDO23ji7fhynhP7HvgM8FEwOfUL0bQ5
+         uqZ4h7AXmP6b4+pJCe7FR92atAU+ZRep/VfKoH7OtxNCNDUHeh+pEdeO7kcxFiAo/NXR
+         H8mQ==
+X-Gm-Message-State: AOJu0YyVLqixCOJM+9sJxLyrciHfUvfCJhjGZPNm/V+IIo5qo9y29kB4
+	BhuJPv5BpvV4RYBqz816nWxLMS5hoTmWNmkk602ebyb9LK7ROKsVJ4oFj/Zr0A==
+X-Gm-Gg: AY/fxX6Mu9og4Wfh2NjUbotjRWmpQnT1qnc6X+wxBzhXfEAm83yo/HwHEaSp2ohO7vK
+	otH5APQaRjZ/SV8F8j1mGO+AhtKkZGOHWJoJd2MI9ZdQqY4NQHkAq+t0AC4EHcsB8kwEda9jqjL
+	n3t39p9v3HvZuYRClqERfSpYpftFS/TwyqY/Byqo+hFeVQCYO3tNNLQVC4dTW4V3pxNYQGEoEVX
+	VIGplQsXibAdVb5Lc3k0BnHFpdM+iA7wiTA9HucssF+bmccfNHFeSmy5N7u5t1cFIKW5s7Wmaj8
+	hWGqzGzg7yrAZiA9kUwBzf9x+b+d6RmwxHvr74b6rrBIs7NMm1bmIEj19ip9tsFK2/yCnlKiMic
+	5ggsHV0ZqfE4IeQWmIKIwZJVdfNqfNqYg4Uh/YJj4qWiY3/4Hpl5fyvnoSgEksi6ioakyE1k/eQ
+	jBPi1lO1Qa8fX8H4nQRWrPqvMFSnTYm6uzwA==
+X-Google-Smtp-Source: AGHT+IGKQIH7NtKp2E0s0ExwXAwQmTpeSrvXYPQYrqju+BZpGqx+yCejW+ZqYAQaBq+eMmzgiskxUQ==
+X-Received: by 2002:a17:902:ec8b:b0:2a2:c1a3:63df with SMTP id d9443c01a7336-2a2f2830da5mr476699035ad.31.1767531514143;
+        Sun, 04 Jan 2026 04:58:34 -0800 (PST)
+Return-Path: <ashutosh.shende181@gmail.com>
+Received: from [127.0.0.1] ([103.171.187.165])
+        by smtp.gmail.com with ESMTPSA id d9443c01a7336-2a2f3d77451sm429754505ad.96.2026.01.04.04.58.33
+        for <aps181ster@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Sun, 04 Jan 2026 04:58:33 -0800 (PST)
+From: ashutosh.shende181@gmail.com
+To: aps181ster@gmail.com
+Subject: =?UTF-8?Q?=E2=9C=85_Information_Received_-_Your_Re?=
+ =?UTF-8?Q?quest_is_Now_Complete_=28ACK-BANK-202601?= =?UTF-8?Q?04-6340?=
+Message-ID: <05abce23-977e-6fa6-3ce5-28fb5148da6e@gmail.com>
+Content-Transfer-Encoding: quoted-printable
+Date: Sun, 04 Jan 2026 12:58:30 +0000
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+
+					<div style=3D"font-family: Arial, sans-serif; max-width: 600px; =
+margin: 0 auto;">
+  <div style=3D"background: #004c8c; color: white; =
+padding: 20px; text-align: center;">
+ =C2=A0=C2=A0 <h1>Banking Document =
+Portal</h1>
+  </div>
+ =20
+  <div style=3D"padding: 20px; background: =
+#f9f9f9;">
+ =C2=A0=C2=A0 <p>Dear Customer,</p>
+ =C2=A0=C2=A0=20
+ =C2=A0=C2=A0 <p>Thank you for providing the missing information!</p>
+ =C2=A0=C2=A0=20
+ =C2=A0=C2=A0 <div style=3D"background: #e8f5e9; padding: =
+15px; border-left: 4px solid #4caf50; margin: 20px 0;">
+ =C2=A0=C2=A0=C2=A0=C2=A0 <p><strong>Acknowledgment ID:</strong> =
+ACK-BANK-20260104-6340</p>
+ =C2=A0=C2=A0=C2=A0=C2=A0 =
+<p><strong>Status:</strong> =E2=9C=85 Ready for Processing</p>
+ =C2=A0=C2=A0=C2=A0=C2=A0 <p><strong>Updated:</strong> 2026-01-04T12:58:28.=
+001Z</p>
+ =C2=A0=C2=A0 </div>
+ =C2=A0=C2=A0=20
+ =C2=A0=C2=A0 <p>Your =
+request is now complete and will be processed within <strong>2-3 business =
+days</strong>.</p>
+ =C2=A0=C2=A0=20
+ =C2=A0=C2=A0 <p>Thank you for banking =
+with us!</p>
+ =C2=A0=C2=A0=20
+ =C2=A0=C2=A0 <p>Best regards,=
+<br><strong>Banking Document Team</strong></p>
+  </div>
+ =20
+  <div style=3D"background: #333; color: #fff; padding: 15px; text-align: =
+center; font-size: 12px;">
+ =C2=A0=C2=A0 <p style=3D"margin: 0;">This is an=
+ automated message.</p>
+  </div>
+</div>
+					<br>
+					<br>
+					---
+					<br>
+					<em>This email was sent automatically with <a =
+href=3D"https://n8n.io/?utm_source=3Dn8n-internal&utm_medium=3Dpowered_by&u=
+tm_campaign=3Dn8n-nodes-base.emailSend_951d5c87438ae58c0906e6a423b042cb54ba=
+920746669957ba654fa1dd13fac3" target=3D"_blank">n8n</a></em>
+				=09
